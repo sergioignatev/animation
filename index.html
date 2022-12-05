@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style> 
-h1,h2,h3,p,li{display:none;}
+h1,h2,h3,p,li,a{display:none;margin-left: 200px;}
+@media (max-width:1000px) {
+    h1,h2,h3,p,li,a{
+        margin-left:100px;
+    } 
+    
+}
+@media (max-width:600px) {
+    h1,h2,h3,p,li,a{
+        margin-left:20px;
+    } 
+    
+}
 </style>
 </head>
 <body>
 
-<button onclick="main()">START</button>
+<button onclick="main()">Начать Анимацию</button>
 <h1 >ПРИВЕТ</h1>
 <h2>Меня зовут Сергей Игнатьев</h2>
 
@@ -27,7 +41,12 @@ h1,h2,h3,p,li{display:none;}
 <li>Git</li>
 <li>GitHub</li>
 </ul>
-
+<h2>Мои Работы</h2>
+<a href="https://sergioignatev.github.io/bycicle/" target="_blank">Велосипеды</a><br>
+<a href="https://sergioignatev.github.io/pipernet/" target="_blank">Силиконовая Долина</a><br>
+<a href="https://sergioignatev.github.io/nevatrip/" target="_blank" >Неватрип</a><br>
+<a href="https://sergioignatev.github.io/paris/#/" target="_blank" >История</a><br>
+<a href="https://sergioignatev.github.io/schneider/"target="_blank" >Двери</a><br>
 <script>
 function main(){
 document.querySelector("button").style.display="none"
@@ -36,7 +55,7 @@ setTimeout(function (){Li("h2")},1000)
 setTimeout(function (){Li("h3")},2000)
 
 setTimeout(function (){Li("li")},3000)
-
+setTimeout(function (){Li("a")},4000)
 
 }
 
@@ -53,7 +72,7 @@ for(let i=0;i<lii.length;i++){
 lii[i].style.display="block";
 lii[i].style.transform=`rotate(${x}deg)`;
 lii[i].style.opacity=x/361
-lii[i].style.marginLeft=x/10+'px'
+
 }
 
 }
