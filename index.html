@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+h1,h2,h3,p,li{display:none;}
+</style>
+</head>
+<body>
+
+<button onclick="main()">START</button>
+<h1 >ПРИВЕТ</h1>
+<h2>Меня зовут Сергей Игнатьев</h2>
+
+<h3> Фронтенд Девелопер</h3>
+
+<ul>
+
+<li>Знаю HTML</li>
+<li> CSS</li>
+<li>Flex Grid</li>
+<li>javaScript</li>
+<li>jQuery</li>
+<li>Bootstrap</li>
+<li>SCSS</li>
+<li>Немного React</li>
+<li>React Router</li>
+<li>Git</li>
+<li>GitHub</li>
+</ul>
+
+<script>
+function main(){
+document.querySelector("button").style.display="none"
+setTimeout(function (){Li("h1")},1)
+setTimeout(function (){Li("h2")},1000)
+setTimeout(function (){Li("h3")},2000)
+
+setTimeout(function (){Li("li")},3000)
+
+
+}
+
+
+
+function Li(teg){
+setInterval(li,01)
+let x=0;
+function li(){
+x++;
+if(x==361){x--}
+let lii=document.querySelectorAll(`${teg}`)
+for(let i=0;i<lii.length;i++){
+lii[i].style.display="block";
+lii[i].style.transform=`rotate(${x}deg)`;
+lii[i].style.opacity=x/361
+lii[i].style.marginLeft=x/10+'px'
+}
+
+}
+}
+
+
+</script>
+</body>
+</html>
